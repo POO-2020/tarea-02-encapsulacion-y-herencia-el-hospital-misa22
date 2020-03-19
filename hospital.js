@@ -7,25 +7,25 @@ export default class Hospital {
      * @param {string} direccion "Direccion del hospital"
      */
     constructor(nombre, direccion) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.doctores = [];
-        this.citas = [];
+        this._nombre = nombre;
+        this._direccion = direccion;
+        this._doctores = [];
+        this._citas = [];
     }
     /**
     * @param {string} doctor 
     */
     registrarDoctor(doctor) {
-         this.doctores.push(doctor);
+         this._doctores.push(doctor);
     }
-    listarDoctores = _ => this.doctores.forEach(d => console.log(d.getPerfil(), '\n'));
+    listarDoctores = _ => this._doctores.forEach(d => console.log(d.getPerfil(), '\n'));
 
     /**
      * 
      * @param {string} cita 
      */
-    registrarCita = cita => this.citas.push(cita);
+    registrarCita = cita => this._citas.push(cita);
 
-    listarCitas = _ => this.citas.forEach(c => console.log(c.getCita(), '\n'));
+    listarCitas = _ => this._citas.forEach(c => console.log(c.getCita(), '\n'));
 
 }

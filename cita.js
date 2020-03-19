@@ -11,11 +11,11 @@ export default class Cita{
      * @param {string} paciente;
      */
     constructor(fecha,hora,doctor,paciente){
-        this.fecha = fecha;
-        this.hora = hora;
-        this.doctor = doctor;
-        this.paciente = paciente;
+        this._fecha = fecha;
+        this._hora = hora;
+        this._doctor = doctor;
+        this._paciente = paciente;
     }
     getCita = _ =>
-        `${this.fecha.getFecha()} ${this.hora.getFormato24()} Dr. ${this.doctor.nombre.getNombreCompleto()} ${this.paciente.nombre.getNombreCompleto()}`;
+        `${this._fecha.getFecha()} ${this._hora.getFormato24()} Dr. ${this._doctor._nombre.getNombreCompleto()} ${this._paciente._nombre.getNombreCompleto()}`;
 }
